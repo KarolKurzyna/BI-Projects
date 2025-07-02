@@ -7,6 +7,6 @@ The project shows:
 - Average credit limits by brand,
 - Filtering by card type.
 
-Dataset covers transactions from 2010 to 2019.
+Dataset after cleaning (column credit_limit changed from text to currency) covers transactions from 2010 to 2019.
 
 This project is part of my BI learning process.
