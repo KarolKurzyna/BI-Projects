@@ -11,3 +11,5 @@ Dataset after basic cleaning in Power Query (removed currency symbols, converted
 The dataset covers transactions from 2010 to 2020.
 
 This project is part of my BI learning process.
+## Dashboard Preview
+![Dashboard Screenshot](Dashboard%20Simple%20Payment%20Card%20Analysis%20in%20USA%20(2010-2020).png)
