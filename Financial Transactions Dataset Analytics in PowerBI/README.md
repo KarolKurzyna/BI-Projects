@@ -7,6 +7,7 @@ The project shows:
 - Average credit limits by brand,
 - Filtering by card type.
 
-Dataset after basic cleaning in PowerQuerry (removed currency symbols, converted credit_limit column from text to numeric values) covers transactions from 2010 to 2019.
+Dataset after basic cleaning in Power Query (removed currency symbols, converted credit_limit column from text to numeric values).  
+The dataset covers transactions from 2010 to 2019.
 
 This project is part of my BI learning process.
