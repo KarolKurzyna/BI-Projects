@@ -1,0 +1,27 @@
+name: MyFund MCP smoke test
+on:
+  push:
+    branches: [myfund-mcp]
+    paths:
+      - 'myfund-mcp/**'
+      - '.github/workflows/myfund-mcp.yml'
+  pull_request:
+    paths:
+      - 'myfund-mcp/**'
+      - '.github/workflows/myfund-mcp.yml'
+jobs:
+  smoke-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install dependencies
+        working-directory: myfund-mcp
+        run: pip install -r requirements.txt
+      - name: Compile server
+        run: python -m compileall -q myfund-mcp/server.py
+      - name: Verify FastMCP HTTP app builds
+        working-directory: myfund-mcp
+        run: python -c "import server; app = server.mcp.http_app(path='/mcp'); assert app is not None; print('MCP HTTP app created')"
