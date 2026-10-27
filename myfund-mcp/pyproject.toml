@@ -1,0 +1,9 @@
+[project]
+name = "myfund-portfolio-mcp"
+version = "0.1.0"
+description = "Private MCP server for reading myfund.pl portfolio data"
+requires-python = ">=3.11"
+dependencies = ["fastmcp>=2.12,<3"]
+
+[tool.fastmcp]
+# Configure this directory as the service root when deploying from a monorepo.
