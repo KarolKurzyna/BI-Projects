@@ -4,7 +4,7 @@ services:
     runtime: python
     plan: free
     rootDir: myfund-mcp
-    buildCommand: pip install -e .
+    buildCommand: pip install -r requirements.txt
     startCommand: python server.py
     healthCheckPath: /health
     envVars:
