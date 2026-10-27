@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: myfund-portfolio-mcp
+    runtime: python
+    plan: free
+    rootDir: myfund-mcp
+    buildCommand: pip install -e .
+    startCommand: python server.py
+    healthCheckPath: /health
+    envVars:
+      - key: MYFUND_API_KEY
+        sync: false
+      - key: MCP_ACCESS_TOKEN
+        sync: false
